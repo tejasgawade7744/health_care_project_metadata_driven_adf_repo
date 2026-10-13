@@ -1,0 +1,15 @@
+{
+	"name": "adf-np-shared-health-care-project",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "210c6adf-506b-4477-b396-2c45c5a7da30",
+		"tenantId": "2ec8a58c-8938-4ce5-b10d-29337bdd94a7"
+	}
+}
