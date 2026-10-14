@@ -1,0 +1,11 @@
+{
+	"name": "PL_SOURCE_TO_SILVER_INNER",
+	"properties": {
+		"parameters": {
+			"t": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}
