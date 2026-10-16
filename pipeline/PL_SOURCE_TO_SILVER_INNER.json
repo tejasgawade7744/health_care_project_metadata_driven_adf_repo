@@ -71,7 +71,7 @@
 					"source": {
 						"type": "PostgreSqlV2Source",
 						"query": {
-							"value": "select * from PUBLIC.@{activity('Read_Table_Details').output.firstRow.source_table_name} ",
+							"value": "select * from PUBLIC.@{activity('Read_Table_Details').output.firstRow.source_table_name}\r\n@{if(\r\n    equals(activity('Read_Table_Details').output.firstRow.load_type,'FULL'),\r\n    '',\r\n    concat(\r\n        ' where ',\r\n        activity('Read_Table_Details').output.firstRow.watermark_column,\r\n        ' > ''',\r\n        variables('watermark_value'),\r\n        ''''\r\n    )\r\n)}\r\n",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00"
@@ -187,6 +187,14 @@
 						},
 						"landing_timestamp": {
 							"value": "@variables('start time')",
+							"type": "Expression"
+						},
+						"merge_keys": {
+							"value": "@coalesce(activity('Read_Table_Details').output.firstRow.merge_keys,'')",
+							"type": "Expression"
+						},
+						"load_type": {
+							"value": "@activity('Read_Table_Details').output.firstRow.load_type",
 							"type": "Expression"
 						}
 					}
