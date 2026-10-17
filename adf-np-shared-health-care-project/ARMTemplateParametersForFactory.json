@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-np-shared-health-care-project"
+		},
+		"ls_adls_health_care_properties_typeProperties_url": {
+			"value": "https://healthcarestorageproject.dfs.core.windows.net/"
+		},
+		"ls_azuredatabricks_properties_typeProperties_existingClusterId": {
+			"value": "1014-152517-9qkmv9nf"
+		},
+		"ls_kv_properties_typeProperties_baseUrl": {
+			"value": "https://kv-health-care.vault.azure.net/"
+		},
+		"ls_metadata_db_properties_typeProperties_server": {
+			"value": "helathcaremetadat.database.windows.net"
+		},
+		"ls_metadata_db_properties_typeProperties_database": {
+			"value": "healthcare_project_metadata"
+		},
+		"ls_metadata_db_properties_typeProperties_userName": {
+			"value": "healthcare"
+		},
+		"ls_postgresql_properties_typeProperties_server": {
+			"value": "ep-curly-hat-b4w7e9sf-pooler.c-6.us-east-2.aws.neon.tech"
+		},
+		"ls_postgresql_properties_typeProperties_database": {
+			"value": "neondb"
+		},
+		"ls_postgresql_properties_typeProperties_username": {
+			"value": "neondb_owner"
+		}
+	}
+}
