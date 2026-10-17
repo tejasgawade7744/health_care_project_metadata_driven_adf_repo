@@ -1,0 +1,23 @@
+{
+	"name": "ls_metadata_db",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "helathcaremetadat.database.windows.net",
+			"database": "healthcare_project_metadata",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "healthcare",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_kv",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "MetadataDbPassword"
+			}
+		}
+	}
+}
