@@ -5,6 +5,10 @@
 			"email_recipients": {
 				"type": "string",
 				"value": "tgawade690@gmail.com"
+			},
+			"env": {
+				"type": "string",
+				"value": "DEV"
 			}
 		},
 		"trustModeClaimForMi": {
