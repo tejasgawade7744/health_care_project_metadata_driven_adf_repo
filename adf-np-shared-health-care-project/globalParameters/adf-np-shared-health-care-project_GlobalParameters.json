@@ -1,1 +1,14 @@
-{}
+{
+	"email_recipients": {
+		"type": "string",
+		"value": "tgawade690@gmail.com"
+	},
+	"env": {
+		"type": "string",
+		"value": "DEV"
+	},
+	"logic_app_url": {
+		"type": "string",
+		"value": "https://prod-23.centralindia.logic.azure.com:443/workflows/a1b0a506b38e402382a312203d500d6e/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=xHxyuuLtDK-frnvK86N6GdZCVcUe6c-7gETN0YrU_9Y"
+	}
+}
