@@ -1,6 +1,12 @@
 {
 	"name": "adf-np-shared-health-care-project",
 	"properties": {
+		"globalParameters": {
+			"email_recipients": {
+				"type": "string",
+				"value": "tgawade690@gmail.com"
+			}
+		},
 		"trustModeClaimForMi": {
 			"value": "Disabled",
 			"editable": true
