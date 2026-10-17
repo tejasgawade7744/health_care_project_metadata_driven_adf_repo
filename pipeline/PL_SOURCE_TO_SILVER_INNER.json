@@ -53,7 +53,7 @@
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "Switch1",
+						"activity": "check_source_system",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -301,7 +301,7 @@
 				}
 			},
 			{
-				"name": "Switch1",
+				"name": "check_source_system",
 				"type": "Switch",
 				"dependsOn": [
 					{
@@ -446,6 +446,10 @@
 											"referenceName": "DS_Source_csv_Binary",
 											"type": "DatasetReference",
 											"parameters": {
+												"folder_name": {
+													"value": "@concat(\n    activity('Read_Table_Details').output.firstRow.source_system,\n    '/',\n    activity('Read_Table_Details').output.firstRow.source_table_name, \n    '/',\n    variables('start time')\n)",
+													"type": "Expression"
+												},
 												"container_name": "landing"
 											}
 										}
